@@ -6,6 +6,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './components/Home'
 import Hotels from './components/Hotels'
 import BookList from './components/BookList'
+import HotelsList from './components/HotelsList'
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
           <Route path='/' element={<Register/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/home' element={<Home/>}/>
-          <Route path='/hotels' element={<Hotels/>}></Route>
+          <Route path='/listOfHotels' element={<HotelsList/>}></Route>
           <Route path='/bookList' element={<BookList/>}></Route>
         </Routes>
       </div>
