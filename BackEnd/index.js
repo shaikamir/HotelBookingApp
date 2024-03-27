@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const getHotelModel = require('./modal/GetHotelsModel');
 const bookingHotel = require("./modal/PostBookHotel");
+const PORT = process.env.BASE_URL || 3200;
 
 const app = express();
 

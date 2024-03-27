@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Hotels from "./Hotels";
 import axios from "axios";
+const base_url = process.env.BASE_URL
 
 const HotelsList = () => {
   const [hotelsListData, setHotelsListData] = useState(null);
   const [blnLoader, setLoader] = useState(true);
 
   const fetchDetails = async () => {
-    let hotelsData = await axios.get("http://localhost:3200/getHotels");
+    let hotelsData = await axios.get(`${base_url}/getHotels`);
     setHotelsListData(hotelsData.data);
     setLoader(false)
   };
